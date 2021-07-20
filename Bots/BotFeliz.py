@@ -4,7 +4,7 @@ class BotFeliz(Bot):
     def __init__(self, nome):
         self.__nome = nome
         self.__comandos = { "1": "Apresentação", "2": "Boas vindas", "3": "Despedida" }
-        super.__init__(self.__nome, self.__comandos)
+        super().__init__(self.__nome, self.__comandos)
 
     @property
     def nome(self):
@@ -18,14 +18,14 @@ class BotFeliz(Bot):
       super().mostra_comandos()
     
     def executa_comando(self, cmd):
-        comandos = { "1": self.boas_vindas(), "2": self.apresentacao(), "3": self.despedida() }
-        comandos[cmd]
+        comandos = { "1": self.apresentacao, "2": self.boas_vindas, "3": self.despedida }
+        print(comandos[cmd]())
 
     def apresentacao(self):
-        return f'{self.__nome} diz: Meu nome é {self.__nome}. Nossa como estou feliz.'
+        return f'Meu nome é {self.__nome}. Nossa como estou feliz.'
 
     def boas_vindas(self):
-        return f'{self.__nome} diz: Boas vindas querido amigo.'
+        return f'---> {self.__nome} diz: Boas vindas querido amigo.'
 
     def despedida(self):
-        return f'{self.__nome} diz: Espero te ver novamente.'
+        return f'---> {self.__nome} diz: Espero te ver novamente.'
