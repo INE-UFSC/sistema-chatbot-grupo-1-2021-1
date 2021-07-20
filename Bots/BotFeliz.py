@@ -1,9 +1,9 @@
 from Bots.Bot import Bot
 
-class BotZangado(Bot):
+class BotFeliz(Bot):
     def __init__(self, nome):
         self.__nome = nome
-        self.__comandos = { "1": "Boas vindas", "2": "Apresentação", "3": "Despedida" }
+        self.__comandos = { "1": "Apresentação", "2": "Boas vindas", "3": "Despedida" }
         super.__init__(self.__nome, self.__comandos)
 
     @property
@@ -22,10 +22,10 @@ class BotZangado(Bot):
         comandos[cmd]
 
     def apresentacao(self):
-        return f'{self.__nome} diz: Meu nome é {self.__nome}. Nossa como não queria estar aqui. Você me irrita.'
+        return f'{self.__nome} diz: Meu nome é {self.__nome}. Nossa como estou feliz.'
 
     def boas_vindas(self):
-        return f'{self.__nome} diz: Boas vindas é o caramba, só quero sair.'
+        return f'{self.__nome} diz: Boas vindas querido amigo.'
 
     def despedida(self):
-        return f'{self.__nome} diz: Finalmente, espero não te ver novamente'
+        return f'{self.__nome} diz: Espero te ver novamente.'
