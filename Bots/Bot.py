@@ -5,7 +5,7 @@ import random as r
 
 class Bot(ABC):
 
-    def __init__(nome,comandos: {}):
+    def __init__(self,nome,comandos: {}):
         self.__nome = nome
         self.__comandos = comandos
 
