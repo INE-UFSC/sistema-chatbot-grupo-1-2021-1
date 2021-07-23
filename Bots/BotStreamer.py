@@ -22,13 +22,13 @@ class BotStreamer(Bot):
         return f'Salve, sou o {self.__nome}.'
 
     def horario_live(self):
-        return f'Live amanha, hoje to cansado.'
+        return f'---> {self.__nome} diz: Live amanha, hoje to cansado.'
 
     def prime(self):
-        return f'Escorrega o prime marreco.'
+        return f'---> {self.__nome} diz: Escorrega o prime marreco.'
 
     def agradecimento_sub(self):
-        return f'GOD GOD, VALEU, TAMO JUNTO.'
+        return f'---> {self.__nome} diz: GOD GOD, VALEU, TAMO JUNTO.'
 
     def boas_vindas(self):
         return f'---> {self.__nome} diz: Opaaa, fala delee.'
