@@ -12,7 +12,7 @@ class BotOtaku(Bot):
 
     @nome.setter
     def nome(self, nome):
-        self.__nome = nome
+        self.__nome = nome #
     
     def executa_comando(self, cmd):
         comandos = { "1": self.apresentacao, "2": self.boas_vindas, "3": self.despedida, "4": self.recomendacoes }
